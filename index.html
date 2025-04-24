@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Твой IP, лузер</title>
     <script>
         fetch('https://api.ipify.org?format=json')
             .then(response => response.json())
             .then(data => {
-                document.getElementById('ip').innerText = `thx`;
+                document.getElementById('ip').innerText = `Твой IP: ${data.ip}. Да, вот и всё, дебил.`;
             })
             .catch(() => {
-                document.getElementById('ip').innerText = "API errorp.";
+                document.getElementById('ip').innerText = "Ой, а API не ответило! Видимо, ты настолько ничтожен, что даже интернет тебя игнорит.";
             });
     </script>
 </head>
 <body>
-    <h1 id="ip">Loading...</h1>
+    <h1 id="ip">Определяю твой IP... (если ты, конечно, не отключил интернет, как полный даун)</h1>
 </body>
 </html>
