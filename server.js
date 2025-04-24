@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 const app = express();
 const port = 3000;
 
-// Настройки почты (замени на свои, если вдруг у тебя есть почта)
+// Настройки почты (замени на свои, если вдруг у тебя есть почта)f
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
