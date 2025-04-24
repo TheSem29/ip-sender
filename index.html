@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('ip').innerText = `thx`;
+            })
+            .catch(() => {
+                document.getElementById('ip').innerText = "API errorp.";
+            });
+    </script>
+</head>
+<body>
+    <h1 id="ip">Loading...</h1>
+</body>
+</html>
