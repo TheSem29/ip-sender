@@ -18,13 +18,15 @@ app.get('/', (req, res) => {
     const mailOptions = {
         from: 'aaaaaaaaaaaaaaaa1541@gmail.com',
         to: 'aaaaaaaaaaaaaaaa1541@gmail.com', // Куда слать (опять же, если ты не забыл)
+        subject: 'Твой IP, лузер',
+        text: `Вот твой IP: ${ip}. Да, даже бегемот справился бы с этим.`
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            res.send(`Error: ${error.message}`);
+            res.send(`Ошибка, кретин: ${error.message}`);
         } else {
-            res.send('Thx for test');
+            res.send('Письмо отправлено! Проверь почту (если ты её помнишь).');
         }
     });
 });
